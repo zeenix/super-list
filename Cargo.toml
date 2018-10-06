@@ -1,0 +1,6 @@
+[package]
+name = "super-lists"
+version = "0.1.0"
+authors = ["Zeeshan Ali <zeenix@collabora.co.uk>"]
+
+[dependencies]
