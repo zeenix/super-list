@@ -1,5 +1,5 @@
 #[derive(Debug, PartialEq)]
-pub enum Node {
-    Data(i32, Box<Node>),
+pub enum Node<T> {
+    Data(T, Box<T>),
     Empty,
 }
