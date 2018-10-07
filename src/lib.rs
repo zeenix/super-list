@@ -6,7 +6,14 @@ mod tests {
 
     #[test]
     fn it_works() {
-        let l = Node::Empty::<i32>;
-        assert_eq!(l, Node::Empty);
+        let next = Box::new(Node::Empty::<i32>);
+        let l = Node::Data(42, next);
+        match l {
+            Node::Data(d, n) => {
+                assert_eq!(d, 42);
+                assert_eq!(n, Box::new(Node::Empty::<i32>));
+            },
+            Node::Empty => panic!(),
+        }
     }
 }
